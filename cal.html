@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function cal(){
+        var op1 = document.getElementById('first').value;
+        var op2 = document.getElementById('second').value;
+        var ope = document.getElementById('ope').value
+        if (ope == '+'){
+            var see = parseInt(op1) + parseInt(op2);
+        }
+        if (ope == '-'){
+            var see = parseInt(op1) - parseInt(op2);
+        }
+        if (ope == '*'){
+            var see = parseInt(op1) * parseInt(op2);
+        }
+        if (ope == '/'){
+            var see = parseInt(op1) / parseInt(op2);
+        }
+        if (ope == '%'){
+            var see = parseInt(op1) % parseInt(op2);
+        }
+        document.getElementById('see').value = see;
+
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="first" step="any">
+    <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="second" step="any">
+    <br>
+    <br>
+    
+    <input id="see" type="text" readonly="">
+    <br>
+    <br>
+    <button onclick="cal()">cont</button>
+</body>
+</html>
